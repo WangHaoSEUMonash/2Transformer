@@ -222,9 +222,6 @@ class Encoder(nn.Module):
 
 ```
 class Decoder(nn.Module):
-    ''' A decoder model with self attention mechanism. '''
-
-
     def forward(self, trg_seq, trg_mask, enc_output, src_mask, return_attns=False):
 
         dec_slf_attn_list, dec_enc_attn_list = [], []
@@ -244,11 +241,11 @@ class Decoder(nn.Module):
         return dec_output,
     ```
     
-   ### 整体结构
-   整体的Transformer
+### 整体结构
+整体的Transformer
 ```
 class Transformer(nn.Module):
-    ''' A sequence to sequence model with attention mechanism. '''
+  
 
     def __init__(
             self, n_src_vocab, n_trg_vocab, src_pad_idx, trg_pad_idx,
