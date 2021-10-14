@@ -247,7 +247,6 @@ class Decoder(nn.Module):
    ### 整体结构
    整体的Transformer
 ```
-
 class Transformer(nn.Module):
     ''' A sequence to sequence model with attention mechanism. '''
 
